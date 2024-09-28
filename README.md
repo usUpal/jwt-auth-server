@@ -1,43 +1,41 @@
-# RESTful API Node Server Boilerplate
+# JWT Authentication Server
 
-[![Build Status](https://travis-ci.org/hagopj13/node-express-boilerplate.svg?branch=master)](https://travis-ci.org/hagopj13/node-express-boilerplate)
-[![Coverage Status](https://coveralls.io/repos/github/hagopj13/node-express-boilerplate/badge.svg?branch=master)](https://coveralls.io/github/hagopj13/node-express-boilerplate?branch=master)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+Description:
+This project provides a rapid deployment solution for a robust, production-ready JWT (JSON Web Token) authentication server built on Node.js. With a single command, developers can set up a fully configured authentication system, eliminating the complexities of manual setup and security configurations.
 
-A boilerplate/starter project for quickly building RESTful APIs using Node.js, Express, and Mongoose.
+Tech Stack: ExpressJS, MongoDB
 
-By running a single command, you will get a production-ready Node.js app installed and fully configured on your machine. The app comes with many built-in features, such as authentication using JWT, request validation, unit and integration tests, continuous integration, docker support, API documentation, pagination, etc. For more details, check the features list below.
+Key Features:
 
-## Quick Start
+- One-command installation and configuration
+- JWT authentication
+- Request validation
+- Comprehensive testing suite (unit and integration)
+- Continuous integration setup
+- Docker support
+- API documentation
+- Pagination
 
-To create a project, simply run:
+This tool aims to accelerate development workflows by providing a robust, scalable foundation for Node.js projects, allowing developers to focus on building core functionality rather than infrastructure setup.
 
-```bash
-npx create-nodejs-express-app <project-name>
-```
+Would you like me to elaborate on any aspect of this project description?
 
-Or
-
-```bash
-npm init nodejs-express-app <project-name>
-```
-
-## Manual Installation
+## Installation
 
 If you would still prefer to do the installation manually, follow these steps:
 
 Clone the repo:
 
 ```bash
-git clone --depth 1 https://github.com/hagopj13/node-express-boilerplate.git
-cd node-express-boilerplate
-npx rimraf ./.git
+git clone --depth 1 https://github.com/usUpal/jwt-auth-server
+cd jwt-auth-server
+
 ```
 
 Install the dependencies:
 
 ```bash
-yarn install
+pnpm install
 ```
 
 Set the environment variables:
@@ -93,55 +91,55 @@ cp .env.example .env
 Running locally:
 
 ```bash
-yarn dev
+pnpm dev
 ```
 
 Running in production:
 
 ```bash
-yarn start
+pnpm start
 ```
 
 Testing:
 
 ```bash
 # run all tests
-yarn test
+pnpm test
 
 # run all tests in watch mode
-yarn test:watch
+pnpm test:watch
 
 # run test coverage
-yarn coverage
+pnpm coverage
 ```
 
 Docker:
 
 ```bash
 # run docker container in development mode
-yarn docker:dev
+pnpm docker:dev
 
 # run docker container in production mode
-yarn docker:prod
+pnpm docker:prod
 
 # run all tests in a docker container
-yarn docker:test
+pnpm docker:test
 ```
 
 Linting:
 
 ```bash
 # run ESLint
-yarn lint
+pnpm lint
 
 # fix ESLint errors
-yarn lint:fix
+pnpm lint:fix
 
 # run prettier
-yarn prettier
+pnpm prettier
 
 # fix prettier errors
-yarn prettier:fix
+pnpm prettier:fix
 ```
 
 ## Environment Variables
@@ -150,10 +148,10 @@ The environment variables can be found and modified in the `.env` file. They com
 
 ```bash
 # Port number
-PORT=3000
+PORT=8080
 
 # URL of the Mongo DB
-MONGODB_URL=mongodb://127.0.0.1:27017/node-boilerplate
+MONGODB_URL=mongodb://127.0.0.1:27017/<db-name>
 
 # JWT
 # JWT secret key
@@ -191,7 +189,7 @@ src\
 
 ## API Documentation
 
-To view the list of available APIs and their specifications, run the server and go to `http://localhost:3000/v1/docs` in your browser. This documentation page is automatically generated using the [swagger](https://swagger.io/) definitions written as comments in the route files.
+To view the list of available APIs and their specifications, run the server and go to `http://localhost:8080/v1/docs` in your browser. This documentation page is automatically generated using the [swagger](https://swagger.io/) definitions written as comments in the route files.
 
 ### API Endpoints
 

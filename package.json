@@ -1,5 +1,5 @@
 {
-  "name": "create-nodejs-express-app",
+  "name": "central-auth",
   "version": "1.7.0",
   "description": "Create a Node.js app for building production-ready RESTful APIs using Express, by running one command",
   "bin": "bin/createNodejsApp.js",
